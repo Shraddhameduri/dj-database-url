@@ -281,9 +281,7 @@ def parse(
     return parsed_config
 
 
-def _parse_option_values(
-    name: str, values: list[str]
-) -> OptionType | list[OptionType]:
+def _parse_option_values(name: str, values: list[str]) -> OptionType | list[OptionType]:
     parsed_values = [_parse_value(name, v) for v in values]
     return parsed_values[0] if len(parsed_values) == 1 else parsed_values
 
